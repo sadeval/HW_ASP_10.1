@@ -1,0 +1,10 @@
+﻿@model List<(string Text, string Controller, string Action)>
+
+<ul class="nav">
+    @foreach (var item in Model)
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="@item.Controller" asp-action="@item.Action">@item.Text</a>
+        </li>
+    }
+</ul>
